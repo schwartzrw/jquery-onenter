@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="RWSApps | OnEnter | jQuery Plugin : Automatically creates a Javascript handle for all onenter events the same way browsers natively support onclick, onblur, etc." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>RWSApps | OnEnter | jQuery Plugin</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/schwartzrw/jquery-onenter">View on GitHub</a>
+
+          <h1 id="project_title">RWSApps | OnEnter | jQuery Plugin</h1>
+          <h2 id="project_tagline">Automatically creates a Javascript handle for all onenter events the same way browsers natively support onclick, onblur, etc.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/schwartzrw/jquery-onenter/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/schwartzrw/jquery-onenter/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h3>
+<a name="dependencies" class="anchor" href="#dependencies"><span class="octicon octicon-link"></span></a>Dependencies</h3>
+
+<p>OnEnter requires the jQuery library. Please <a href="http://jquery.com/download/">download</a> the jQuery library and include it in the </p> of your html page.
+
+<h3>
+<a name="easy-implementation" class="anchor" href="#easy-implementation"><span class="octicon octicon-link"></span></a>Easy Implementation</h3>
+
+<p>OnEnter is automatically enabled when the Javascript file is included. Simply add the attribute "onenter" to any element, and it will be execute like any other Javascript event.</p>
+
+<pre><code>&lt;input type="text" id="first_name" name="first_name" onenter="someFunction('var1','var2');" /&gt;
+</code></pre>
+
+<h3>
+<a name="dynamic-content-support" class="anchor" href="#dynamic-content-support"><span class="octicon octicon-link"></span></a>Dynamic Content Support</h3>
+
+<p>OnEnter supports fields that are generated dynamically from Javascript or AJAX calls. Simply execute OnEnter.detect(); and OnEnter will re-parse the DOM.</p>
+
+<pre><code>&lt;input type="button" onclick="loadDynamicField();" value="Load Dynamic Field" /&gt;
+&lt;div id="dynamic"&gt;&lt;/div&gt;
+&lt;script type="text/javascript" language="javascript"&gt;
+function loadDynamicField(){
+    var div = document.getElementById('dynamic');
+    div.innerHTML = "Dynamic Field: &lt;input type='text' onenter='alert(\"Dynamic fields work.\");' /&gt;";
+    OnEnter.detect();
+}
+&lt;/script&gt;
+</code></pre>
+
+<p><a href="http://jquery.rwsapps.com/OnEnter">Browse full documentation site</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">RWSApps | OnEnter | jQuery Plugin maintained by <a href="https://github.com/schwartzrw">schwartzrw</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
